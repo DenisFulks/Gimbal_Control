@@ -1,2 +1,4 @@
 # Gimbal_Control
-Control System for Gimbal Unit
+Open Source Control System for Gimbal Unit
+
+Currently works only off one controller
