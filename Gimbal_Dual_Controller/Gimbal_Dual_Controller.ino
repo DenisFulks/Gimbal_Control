@@ -57,7 +57,7 @@ void loop() {
   Angle = mapFloat(x, 0, 1023, -1 * maxAngle + Offset, maxAngle - Offset) - Offset;
 
   // Changes speed based on angle for x-input
-  if (abs(Angle) < degreesPerStep && abs(CurAngle / degreesPerStep) < fast) {
+  if ((abs(Angle) < degreesPerStep && ((abs(CurAngle / degreesPerStep) <= fast) || (abs(CurAngle) == 0))) || ((abs(abs(Angle) - abs(CurAngle)) < (2 * degreesPerStep)))) {
     Steps = slow;
   } else if (abs(factor * CurAngle) <= abs(Angle) || abs(factor * Angle) <= abs(CurAngle)) {
     Steps = fast;
