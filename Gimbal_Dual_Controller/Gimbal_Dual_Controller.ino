@@ -10,16 +10,16 @@ float degreesPerStep = 360 / steps;
 // parameters
 float maxAngle = 10;      // Sets max angle which gimbal can go
 float factor = 1.15;      // Sets at which angle switches between slow and fast
-int fast = 2;             // Number of steps per cycle at fast speed
-int slow = 1;             // Number of steps per cycle at slow speed
-int speed = 700;          // Speed of stepper
+unsigned int fast = 2;             // Number of steps per cycle at fast speed
+unsigned int slow = 1;             // Number of steps per cycle at slow speed
+unsigned int speed = 700;          // Speed of stepper
 
 // variables
 float x;
 float Angle;
 float Offset;
 float CurAngle;
-int Steps;
+unsigned int Steps;
 
 // Allows for mapping analog input to degree measure
 float mapFloat(float x, float inMin, float inMax, float outMin, float outMax) {
